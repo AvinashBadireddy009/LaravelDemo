@@ -1,0 +1,11 @@
+php artisan serve
+
+php artisan make:auth
+
+php artisan make:model Contact --migration
+
+php artisan make:controller ContactController --resource
+
+php artisan migrate
+
+php artisan migrate:fresh
