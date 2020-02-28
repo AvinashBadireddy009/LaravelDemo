@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Contact;
+use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
@@ -58,10 +57,10 @@ class ContactController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Contact $contact)
     {
         //
     }
@@ -69,23 +68,23 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contact $contact, $id)
     {
         $contact = Contact::find($id);
-        return view('contacts.edit')->with('contact', $contact);;
+        return view('contacts.edit')->with('contact', $contact);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id, Contact $contact)
     {
         $request->validate([
             'first_name'=>'required',
@@ -108,10 +107,10 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Contact $contact, $id)
     {
         $contact = Contact::find($id);
         $contact->delete();
