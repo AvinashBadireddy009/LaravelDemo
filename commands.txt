@@ -1,11 +1,18 @@
 php artisan serve
 
-php artisan make:auth
+for 6 and above
+composer require laravel/ui "^1.0" --dev
+php artisan ui vue --auth
 
 php artisan make:model Contact --migration
 
 php artisan make:controller ContactController --resource
 
+php artisan make:model Task -m -c -r
+
 php artisan migrate
 
 php artisan migrate:fresh
+
+Keep this in App service provider and routes 
+\URL::forceScheme('https');
