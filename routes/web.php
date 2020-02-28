@@ -38,17 +38,17 @@ Route::get('/contacts/index', [
         'as'   => 'contacts.index',
 ]);
 
-Route::get('/contacts/{contact}/edit', [
+Route::get('/contacts/{id}/edit', [
         'uses' => 'ContactController@edit',
         'as'   => 'contacts.edit',
 ]);
 
-Route::delete('/contacts/{contact}/delete', [
+Route::delete('/contacts/{id}/delete', [
         'uses' => 'ContactController@destroy',
         'as'   => 'contacts.destroy',
 ]);
 
-Route::patch('/contacts/{contact}/update', [
+Route::patch('/contacts/{id}/update', [
         'uses' => 'ContactController@update',
         'as'   => 'contacts.update',
 ]);
