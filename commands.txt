@@ -14,5 +14,7 @@ php artisan migrate
 
 php artisan migrate:fresh
 
-Keep this in App service provider and routes 
+Keep this in App service provider boot method and routes 
 \URL::forceScheme('https');
+
+https://engineering.paiza.io/entry/paizacloud_laravel
