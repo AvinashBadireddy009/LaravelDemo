@@ -20,3 +20,5 @@ Keep this in App service provider boot method and routes
 https://engineering.paiza.io/entry/paizacloud_laravel
 
 https://paiza.cloud/
+
+composer create-project --prefer-dist laravel/laravel blog
